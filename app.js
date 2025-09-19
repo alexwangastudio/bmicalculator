@@ -13,7 +13,7 @@
     if (bmi < 18.5) return '過輕';
     else if (bmi >= 18.5 && bmi < 24) return '正常';
     else if (bmi >= 24 && bmi < 27) return '過重';
-    else return '肥胖';
+    else return '乙定是大拇指的啦';
   }
 
   function calcBMI(heightCm, weightKg) {
