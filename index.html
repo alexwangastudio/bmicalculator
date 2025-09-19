@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BMI 計算器</title>
+  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="極簡風格灰白色系的 BMI 計算器" />
+</head>
+<body>
+  <main class="container">
+    <section class="card">
+      <h1 class="title">BMI 計算器</h1>
+      <form id="bmi-form" class="form" novalidate>
+        <div class="field">
+          <label for="height">身高（cm）</label>
+          <input id="height" name="height" type="number" inputmode="decimal" step="0.1" min="0" placeholder="例如：170" required />
+          <small class="hint">請輸入公分（可含小數）。</small>
+        </div>
+
+        <div class="field">
+          <label for="weight">體重（kg）</label>
+          <input id="weight" name="weight" type="number" inputmode="decimal" step="0.1" min="0" placeholder="例如：65.5" required />
+          <small class="hint">請輸入公斤（可含小數）。</small>
+        </div>
+
+        <div class="actions">
+          <button type="submit" class="btn">計算 BMI</button>
+          <button type="button" class="btn btn-ghost" id="reset-btn">清除</button>
+        </div>
+      </form>
+
+      <div id="result" class="result" aria-live="polite">
+        <div class="result-line">
+          <span class="label">BMI：</span>
+          <span id="bmi-value" class="value">—</span>
+        </div>
+        <div class="result-line">
+          <span class="label">體型狀態：</span>
+          <span id="bmi-status" class="value">—</span>
+        </div>
+      </div>
+
+      <details class="note">
+        <summary>判定區間（與程式一致）</summary>
+        <ul>
+          <li>BMI &lt; 18.5：過輕</li>
+          <li>18.5 ≤ BMI &lt; 24：正常</li>
+          <li>24 ≤ BMI &lt; 27：過重</li>
+          <li>BMI ≥ 27：肥胖</li>
+        </ul>
+      </details>
+    </section>
+
+    <footer class="footer">
+      <p>前端純靜態頁面，可直接部署至 GitHub Pages。</p>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
